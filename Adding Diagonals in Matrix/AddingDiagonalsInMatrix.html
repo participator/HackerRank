@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Add Diagonals in Matrix</title>
+    <script>
+        (function(){
+            var a = [3,2,1, 4,3,4, 2,1,3];
+
+            var amountRowsAndColumns = Math.sqrt(a.length);
+            var x1 = 0, x2 = amountRowsAndColumns-1;
+            var d1 = 0, d2 = 0;
+
+            for(; x1 < a.length; x1 = x1 + 1 + amountRowsAndColumns, x2 = x2 - 1 + amountRowsAndColumns){
+                d1 += a[x1];
+                d2 += a[x2];
+            }
+
+            console.log(Math.abs(d1 - d2));
+        })()
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<Doctype html>
+    <head>
+        <script>
+        var setId = 0;
+        var nodeId = 0;
+
+        var connection = {
+            nodeFrom: 0,
+            nodeTo: 0,
+            setFrom: 0,
+            setTo: 0,
+            setNodeFrom: function(node){
+                this.nodeFrom = node.id;
+            },
+            setNodeTo: function(){
+                this.nodeTo = idk;
+            },
+            setSetFrom: function(set){
+                this.setFrom = set.id;
+            },
+            setSetTo: function(){
+                this.setTo = idk;
+            }
+        }
+
+        var node = {
+            id: 0,
+            connections: [],
+            setId : function(){
+                this.Id = nodeId++;
+            },
+            createConnections: function(){
+                this.connections.push(Object.create(connection));
+            }
+        }
+
+        var set = {
+            id: 0,
+            nodes: [],
+            setId : function(){
+                this.id = setId++;
+            },
+            createNode: function(){
+                this.nodes.push(Object.create(node));
+                this.nodes[this.nodes.length-1].setId();
+            }
+        };
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

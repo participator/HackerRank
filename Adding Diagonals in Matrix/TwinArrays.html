@@ -1,0 +1,39 @@
+<DOCTYPE html>
+<html>
+<head>
+    <script>
+    ar1 = [1,2,3,4,5];
+    ar2 = [5,4,3,2,1];
+
+    var ar1copy = ar1.slice();
+    var ar2copy = ar2.slice();
+
+    function twins(){
+        ar1copy.sort(function(a,b){
+            if(a<b)return -1;
+            if(a>b)return 1;
+            if(a===b) return 0;
+        });
+        ar2copy.sort(function(a,b){
+            if(a<b)return -1;
+            if(a>b)return 1;
+            if(a===b) return 0;
+        });
+
+        var ar1Value = ar1copy[0];
+        var ar1Index = ar1.indexOf(ar1Value);
+        var ar2Index;
+        for(var x = 0; x < ar1.length; x++){
+            var ar2Value = ar2copy[x];
+            ar2Index = ar2.indexOf(ar2Value);
+            if( ar2Index !== ar1Index){
+            break;
+            }
+            }
+            console.log(ar1[ar1Index] + ar2[ar2Index]);
+    }
+    </script>
+</head>
+<body>
+</body>
+</html>

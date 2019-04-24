@@ -1,0 +1,35 @@
+<DOCTYPE html>
+    <html>
+    <head>
+        <script>
+            var s = "100001abc101";
+            var matches = 0;
+
+            first: for(var x=0; x<s.length;x++){
+                if(isNaN(s[x])) continue;
+                if(s[x] == 1){
+                    second:
+                    for(var y=x+1; y<s.length; y++){
+                        if(isNaN(s[y])) break;
+                        if(s[y] == 0){
+                            for(var z=y+1; z<s.length; z++){
+                                if(isNaN(s[z])) break;
+                                if(s[z] == 1){
+                                    matches++;
+                                    continue first;
+                                }
+                                else if(s[z] == 0){
+                                    continue second;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            console.log(matches);
+        </script>
+    </head>
+    <body>
+    </body>
+    </html>
