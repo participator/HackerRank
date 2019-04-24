@@ -3,16 +3,19 @@
     window.RegEx_helpers = {};
     const exports = {};
     RegEx_helpers = exports;
-
-    const input = document.forms[0].elements.matchInput;
-    const submit = document.querySelector('button[type="submit"]');
-    const result = document.getElementById('result');
     
-    exports.validate = function(reg_expr) {
-        submit.addEventListener('click', event => {
+    /**
+     * Validate the string in the input against the regular expression
+     * reg_ex {string|RegExp} - regular expression to test against
+     * inputElement {HTMLINPUTElement} - element to get string to test
+     * submitElement {HTMLButtonElement|HTMLInputElement} - element to add click listener to
+     * resultElement {HTMLElement} - element to display result in
+     */
+    exports.validate = function(reg_expr, inputElement, submitElement, resultElement) {
+        submitElement.addEventListener('click', event => {
             event.preventDefault();
     
-            result.innerText = reg_expr.test(input.value) ? 'Match' : 'Does not Match';
+            resultElement.innerText = reg_expr.test(inputElement.value) ? 'Match' : 'Does not Match';
         })
     }
 })();
