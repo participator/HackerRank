@@ -8,6 +8,8 @@
     <script defer src='validate.js' type="application/javascript"></script>
     <script defer src='Backreferences/matching_same_text_again_&_again.js' type="application/javascript"></script>
     <script defer src='Backreferences/backreferences_to_failed_groups.js' type="application/javascript"></script>
+    <script defer src='Backreferences/branch_reset_groups.js' type="application/javascript"></script>
+    <script defer src='Backreferences/forward_references.js' type="application/javascript"></script>
 </head>
 <body>
     <h1>Regex Challenges</h1>
@@ -21,6 +23,23 @@
     </section>
     <section id="backreferences_to_failed_groups">
         <h2>Backreferences to Failed Groups</h2>
+        <form action="POST">
+            <input type="text" placeholder="Enter text to match" name="matchInput">
+            <button type="submit" name="submit">Enter</button>
+        </form>
+        <div class="result"></div>
+    </section>
+    <section id="branch_reset_groups">
+        <h2>Branch Reset Groups</h2>
+        <form action="POST">
+            <input type="text" placeholder="Enter text to match" name="matchInput">
+            <button type="submit" name="submit">Enter</button>
+        </form>
+        <div class="result"></div>
+    </section>
+    </section>
+    <section id="forward_references">
+        <h2>Forward References</h2>
         <form action="POST">
             <input type="text" placeholder="Enter text to match" name="matchInput">
             <button type="submit" name="submit">Enter</button>
